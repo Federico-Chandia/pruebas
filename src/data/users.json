@@ -1,0 +1,85 @@
+[
+   {
+      "id": 1,
+      "name": "Federico",
+      "lastName": "Chandia",
+      "email": "fede@gmail.com",
+      "password": "$2a$10$XTKMUTScdn6EH4lgdzUt6unZM/hiz4lN792TjO9oORLwj1klCuUTm",
+      "passwordTwo": "123456",
+      "role": "admin",
+      "address": null,
+      "birthdate": null,
+      "image": "federico.jpg"
+   },
+   {
+      "id": 2,
+      "name": "Melitza",
+      "lastName": "Gaunas",
+      "email": "melitza@gmail.com",
+      "password": "$2a$10$XTKMUTScdn6EH4lgdzUt6unZM/hiz4lN792TjO9oORLwj1klCuUTm",
+      "passwordTwo": "123456",
+      "role": "admin",
+      "address": "lanus",
+      "birthdate": "2000-12-26",
+      "image": "Melitza.jpg"
+   },
+   {
+      "id": 3,
+      "name": "Christian",
+      "lastName": "Ramos",
+      "password": "$2a$10$XTKMUTScdn6EH4lgdzUt6unZM/hiz4lN792TjO9oORLwj1klCuUTm",
+      "passwordTwo": "123456",
+      "role": "admin",
+      "address": "",
+      "birthdate": null,
+      "image": "Christian.jpg"
+   },
+   {
+      "id": 4,
+      "name": "Andres",
+      "lastName": "Olivera",
+      "email": "Andres@gmail.com",
+      "password": "$2a$10$XTKMUTScdn6EH4lgdzUt6unZM/hiz4lN792TjO9oORLwj1klCuUTm",
+      "passwordTwo": "123456",
+      "role": "admin",
+      "address": null,
+      "birthdate": null,
+      "image": "Andres.jpg"
+   },
+   {
+      "id": 5,
+      "name": "Marcos",
+      "lastName": "Estevez",
+      "email": "marcos@gmail.com",
+      "password": "$2a$10$XTKMUTScdn6EH4lgdzUt6unZM/hiz4lN792TjO9oORLwj1klCuUTm",
+      "passwordTwo": "123456",
+      "role": "user",
+      "address": null,
+      "birthdate": null,
+      "image": "user2.jpg"
+   },
+   {
+      "id": 6,
+      "name": "Arturo",
+      "lastName": "Buendia",
+      "email": "artu@gmail.com",
+      "password": "$2a$10$XTKMUTScdn6EH4lgdzUt6unZM/hiz4lN792TjO9oORLwj1klCuUTm",
+      "passwordTwo": "123456",
+      "role": "user",
+      "address": "La Boca ",
+      "birthdate": "2023-03-14",
+      "image": "user1.jpg"
+   },
+   {
+      "id": 7,
+      "name": "Juan",
+      "lastName": "mohicano",
+      "email": "juani@gmail.com",
+      "password": "$2a$10$XTKMUTScdn6EH4lgdzUt6unZM/hiz4lN792TjO9oORLwj1klCuUTm",
+      "passwordTwo": "123456",
+      "role": "user",
+      "address": null,
+      "birthdate": null,
+      "image": "user3.jpg"
+   }
+]
