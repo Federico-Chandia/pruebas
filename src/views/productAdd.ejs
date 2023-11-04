@@ -9,68 +9,39 @@
                     <h3 class="newProduct__main__form--title">Vende lo que quieras!</h3>
                     <br>
                     <div class="mb-3">
-                        <input placeholder="Nombre" class="form-control" type="text" name="name" id="name">
-                        <label for="marca" class="form-label">Marca</label>
-                        <input type="text" class="form-control" name="marca" placeholder="Ingrese la marca"
-                            id="marcaProd">
-                        <input placeholder="precio" type="number" name="price" id="price" class="form-control">
+                        <label for=>Nombre del producto</label>
+                        <input placeholder="Ingrese el nombre" class="form-control" type="text" name="name" id="name">
+
+                        <label for="brand" class="form-label">Marca</label>
+                        <input type="text" class="form-control" name="brand" placeholder="Ingrese la marca" id="brandId">
+
+                        <label for="">Precio</label>    
+                        <input placeholder="Ingrese el precio" type="number" name="price" id="price" class="form-control">
+
+                        <label for="prodDescription" class="form-label">Breve descripción</label>
+                            <textarea class="form-control" name="description" id="description" rows="3">Describa su producto</textarea>
+
                         <div class="boxselect_estadoProducto">
-                            <label for="prodDescription" class="form-label">Breve descripción</label>
-                            <textarea class="form-control" name="description" id="description" rows="3">...</textarea>
+                            
+                            
+                                <span></span>
+                            </div>
+
+                            <section>
+                                <label for="category" class="form-label">Categoría</label>
+                                <select id="categoryId" name="category">
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%= categories.name %>"><%= categories.name %></option>
+                                    <% }); %>
+                                </select>
+                                
+                            </section>
                             <div class="boximage_imgProduct">
                                 <label for="" class="form-label">Imagen del producto</label>
                                 <div class="input-group mb-3">
                                     <input type="file" class="form-control" multiple name="images" id="images" />
                                     <label class="input-group-text" for="images">Subir</label>
                                 </div>
-                                <span></span>
-                            </div>
-
-
-                            <label for="tiempo-uso" class="form-label">Tiempo de uso</label>
-                            <select name="tiempo-uso" id="tiempo-uso" class="form-select form-select-sm"
-                                aria-label="Tiempo de uso">
-                                <option value="menos6">Menos 6 meses</option>
-                                <option value="mas6">Más 6 meses</option>
-                                <option value="masAño">Más de 1 año</option>
-                            </select>
-                            <section>
-                                <label for="color" class="form-label">Color</label>
-                                <input type="text" class="form-control" name="colorProd" placeholder="Ingrese el color"
-                                    id="colorProd">
-
-                                <label for="Categoría" class="form-label">Categoría</label>
-                                <ul>
-                                    <li><label for="electro" class="form-label">Electro</label>
-                                        <input type="checkbox" value="electro" name="electro" id="electro">
-                                    </li>
-                                    <li><label for="moda" class="form-label">Moda</label>
-                                        <input type="checkbox" value="moda" name="moda" id="moda">
-                                    </li>
-                                    <li><label for="hogar" class="form-label">Hogar</label>
-                                        <input type="checkbox" value="hogar" name="hogar" id="hogar">
-                                    </li>
-                                    <li><label for="jugueteria" class="form-label">Jugueteria</label>
-                                        <input type="checkbox" value="jugueteria" name="jugueteria" id="jugueteria">
-                                    </li>
-                                    <li><label for="otros" class="form-label">Otros</label>
-                                        <input type="checkbox" value="otros" name="otros" id="otros">
-                                    </li>
-                                </ul>
-                            </section>
-                            <label for="stock">Cantidad</label>
-                            <select name="stock" id="stock" class="form-select form-select-sm" aria-label="Stock">
-                                <option value="unico">Único</option>
-                                <option value="varios">Varios</option>
-                            </select>
-                            <label for="variante">Variantes</label>
-                            <select name="variante" id="variante" class="form-select form-select-sm"
-                                aria-label="Variante">
-                                <option value="color">color</option>
-                                <option value="material">Material</option>
-                                <option value="tamaño">Tamaño</option>
-                            </select>
-
                             <div class="boxbutton">
                                 <div>
                                     <a href="/">

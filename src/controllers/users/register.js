@@ -1,3 +1,3 @@
 module.exports = (req,res) => {
-    return res.render('register')
+  return res.render('register')
 }

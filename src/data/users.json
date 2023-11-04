@@ -13,7 +13,7 @@
    },
    {
       "id": 2,
-      "name": "Melitza",
+      "name": "",
       "lastName": "Gaunas",
       "email": "melitza@gmail.com",
       "password": "$2a$10$XTKMUTScdn6EH4lgdzUt6unZM/hiz4lN792TjO9oORLwj1klCuUTm",
@@ -27,6 +27,7 @@
       "id": 3,
       "name": "Christian",
       "lastName": "Ramos",
+      "email": "cris@gmail.com",
       "password": "$2a$10$XTKMUTScdn6EH4lgdzUt6unZM/hiz4lN792TjO9oORLwj1klCuUTm",
       "passwordTwo": "123456",
       "role": "admin",
@@ -81,5 +82,17 @@
       "address": null,
       "birthdate": null,
       "image": "user3.jpg"
+   },
+   {
+      "id": 8,
+      "name": "leo",
+      "lastName": "Lopez",
+      "address": "CABA",
+      "email": "leo@gmail.com",
+      "password": "$2a$10$2sCP3vNd/.fgq2S4ApXPIeDItBXWmzTMmGHtkcRutGltdI6mV01RS",
+      "passwordTwo": "111111",
+      "role": "user",
+      "birthdate": "2023-09-12",
+      "image": "user2.jpg"
    }
 ]

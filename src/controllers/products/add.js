@@ -1,11 +1,12 @@
-const { readJSON } = require("../../data");
+const db = require('../../database/models');
 
-module.exports = (req, res) => {
-    const categories = readJSON('categories.json')
-    const products = readJSON('products.json')
-    return res.render('productAdd', {
-        categories, 
-        products
-    })
-
-}
+module.exports = async (req, res) => {
+  try {
+    const categories = await db.Category.findAll();
+    const brands = await db.Brand.findAll();
+    res.render('productAdd', { allCategories: categories, brands });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).send('Error retrieving categories and brands');
+  }
+};
