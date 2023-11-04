@@ -8,13 +8,14 @@ const loginProcess = require('../controllers/users/loginProcess');
 const notUserCheck = require('../middlewares/notUserCheck');
 const {arrayValidaciones,validateCreateForm } = require('../middlewares/validacionesRegister');
 const arrayValidationUpdate  = require('../validations/validationUpdate');
+const login = require('../controllers/users/login');
 
 
 /* GET users listing. */
 
 router.get('/register',notUserCheck, usersController.register)
 router.post('/registerOk', arrayValidaciones,validateCreateForm,usersController.newUser);
-router.get('/login',notUserCheck, loginProcess);
+router.get('/login',notUserCheck, login);
 router.post('/login', loginValidator, loginProcess);
 router.get('/logOut', usersController.logOut);
 router.get('/profile/', userCheck, usersController.profile);
