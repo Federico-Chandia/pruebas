@@ -27,7 +27,6 @@ const errors = validationResult(req);
       })
       .catch((error) => console.log(error));
   } else {
-    return  console.log(req.body),
    res.render('login', {
         errors : errors.mapped()
     })

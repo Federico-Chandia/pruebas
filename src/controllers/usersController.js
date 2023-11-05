@@ -3,11 +3,8 @@ module.exports = {
     loginProcess : require('./users/loginProcess'),
     logOut : require('./users/logOut'),
     register : require('./users/register'),
-    registerOk : (req,res) => {
-        return res.render('registerOk');
-    },
+    registerOk : ('./users/registerOk'),
     update : require('./users/update'),
     profile : require('./users/profile'),
-
     newUser: require('./users/createUser'),
 }

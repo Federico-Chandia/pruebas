@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const usersController = require('../controllers/usersController');
+const { register, newUser, profile, update, logOut } = require('../controllers/usersController');
 const loginValidator = require("../validations/loginValidator");
 const userCheck = require('../middlewares/userCheck');
 const upload = require('../middlewares/upload');
@@ -13,12 +13,12 @@ const login = require('../controllers/users/login');
 
 /* GET users listing. */
 
-router.get('/register',notUserCheck, usersController.register)
-router.post('/registerOk', arrayValidaciones,validateCreateForm,usersController.newUser);
+router.get('/register',notUserCheck, register)
+router.post('/registerOk', arrayValidaciones,validateCreateForm, newUser);
 router.get('/login',notUserCheck, login);
 router.post('/login', loginValidator, loginProcess);
-router.get('/logOut', usersController.logOut);
-router.get('/profile/', userCheck, usersController.profile);
-router.put('/update/',upload.single('image'), arrayValidationUpdate, usersController.update);
+router.get('/logOut', logOut);
+router.get('/profile/', userCheck, profile);
+router.put('/update/',upload.single('image'), arrayValidationUpdate, update);
 
 module.exports = router;
