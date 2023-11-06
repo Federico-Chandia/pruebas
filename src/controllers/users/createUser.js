@@ -10,13 +10,15 @@ module.exports = (req, res) => {
     db.User.create({
       name: name.trim(),
       lastName: lastName.trim(),
-      adress: address.trim(),
+      address: address.trim(),
       email: email.trim(),
       password: hashSync(password, 10),
       roleId: 2,
     })
     .then((user) => {
       console.log(user);
+      console.log("db.Birthdate:", db.Birthdate);
+      console.log("db.Address:", db.Address);
       db.Birthdate.create({
         userId: user.id,
         birthdate: birthdate,
