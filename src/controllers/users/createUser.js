@@ -6,22 +6,30 @@ module.exports = (req, res) => {
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
-    const { name, lastName, email, password } = req.body;
+    const { name, lastName, address, birthdate, email, password } = req.body;
     db.User.create({
       name: name.trim(),
       lastName: lastName.trim(),
+      adress: address.trim(),
       email: email.trim(),
       password: hashSync(password, 10),
       roleId: 2,
     })
-      .then((user) => {
-        console.log(user);
-        db.Birthdate.create({
+    .then((user) => {
+      console.log(user);
+      db.Birthdate.create({
+        userId: user.id,
+        birthdate: birthdate,
+      }).then(() => {
+        db.Address.create({
           userId: user.id,
+          address: address,
         }).then(() => {
           return res.redirect("/");
         });
-      })
+      });
+    })
+
       .catch((error) => console.log(error));
   } else {
     return res.render("register", {

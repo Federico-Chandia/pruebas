@@ -46,6 +46,17 @@
                             </div>
                         </div>
                     </div>
+                    <p class="title_reg">Fecha de Nacimiento</p>
+                    <div class="register__main__box__formbox--campobox">
+                        <div class="form-box-reg">
+                            <input class="register__main__box__formbox--campo" type="date" name="birthdate" id="birthdate" placeholder="Fecha de Nacimiento">
+                            <% if(locals.errors && locals.errors.birthdate){ %>
+                                <div class="text-danger">
+                                    <%= locals.errors.birthdate.msg %>
+                                </div>
+                            <% } %>
+                        </div>
+                    </div>
                     <div class="register__main__box__formbox--campobox">
                         <div class="form-box-reg">
                             <input class="register__main__box__formbox--campo" type="email" name="email" id="email" placeholder="Correo electrónico" value="<%= locals.old && locals.old.email ? locals.old.email : '' %>">
@@ -76,17 +87,7 @@
                             <% } %>
                         </div>
                     </div>
-                    <p class="title_reg">Fecha de Nacimiento</p>
-                    <div class="register__main__box__formbox--campobox">
-                        <div class="form-box-reg">
-                            <input class="register__main__box__formbox--campo" type="date" name="birthdate" id="birthdate" placeholder="Fecha de Nacimiento">
-                            <% if(locals.errors && locals.errors.birthdate){ %>
-                                <div class="text-danger">
-                                    <%= locals.errors.birthdate.msg %>
-                                </div>
-                            <% } %>
-                        </div>
-                    </div>
+                   
                     <div class="register__main__box__formbox--buttonbox">
                         <button type="submit" class="register__main__box__formbox--button">Crear</button>
                     </div>
